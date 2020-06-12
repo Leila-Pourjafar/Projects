@@ -89,7 +89,7 @@ namespace MyApplication
 			//System.Windows.Forms.Application.Run(new StartupForm());
 
 			#region Runing Startup Form and then Disposing!
-			StartupForm startupForm = new StartupForm();
+			LoginForm startupForm = new LoginForm();
 
 			System.Windows.Forms.Application.Run(startupForm);
 
