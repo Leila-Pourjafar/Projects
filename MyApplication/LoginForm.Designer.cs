@@ -91,6 +91,7 @@
             // 
             // resetButton
             // 
+            this.resetButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.resetButton.Location = new System.Drawing.Point(320, 144);
             this.resetButton.Name = "resetButton";
             this.resetButton.Size = new System.Drawing.Size(121, 34);
@@ -107,6 +108,7 @@
             this.registerbutton.TabIndex = 6;
             this.registerbutton.Text = "Re&gister";
             this.registerbutton.UseVisualStyleBackColor = true;
+            this.registerbutton.Click += new System.EventHandler(this.registerbutton_Click);
             // 
             // exitButton
             // 
