@@ -89,19 +89,19 @@ namespace MyApplication
 			//System.Windows.Forms.Application.Run(new StartupForm());
 
 			#region Runing Startup Form and then Disposing!
-			LoginForm startupForm = new LoginForm();
+			//LoginForm startupForm = new LoginForm();
 
-			System.Windows.Forms.Application.Run(startupForm);
+			System.Windows.Forms.Application.Run(Infrastructure.Utility.MainForm);
 
-			if (startupForm != null)
-			{
-				if (startupForm.IsDisposed == false)
-				{
-					startupForm.Dispose();
-				}
+			//if (startupForm != null)
+			//{
+			//	if (startupForm.IsDisposed == false)
+			//	{
+			//		startupForm.Dispose();
+			//	}
 
-				//startupForm = null;
-			}
+			//	//startupForm = null;
+			//}
 			#endregion /Runing Startup Form and then Disposing!
 			// **************************************************
 		}

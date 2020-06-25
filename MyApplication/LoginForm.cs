@@ -56,9 +56,11 @@ namespace MyApplication
                         Reset();
                         return;
                     }
-
-                    MessageBox.Show("خوش آمدید");
-                    return;
+                    Hide();
+                    Infrastructure.Utility.AuthenticatedUser = user;
+                    Infrastructure.Utility.MainForm.Show();
+                   // MessageBox.Show("خوش آمدید");
+                    //return;
                 }
 
                 else
@@ -96,9 +98,7 @@ namespace MyApplication
 
         private void registerbutton_Click(object sender, System.EventArgs e)
         {
-            RegisterForm registerForm = new RegisterForm();
-
-            registerForm.Show();
+            Infrastructure.Utility.RegisterForm.Show();
         }
     }
 }
