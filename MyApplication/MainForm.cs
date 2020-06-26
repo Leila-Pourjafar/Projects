@@ -27,6 +27,10 @@ namespace MyApplication
                     MdiParent = this,
                 };
             }
+            if (myChangePasswordForm.IsDisposed == false)
+            {
+                myChangePasswordForm.Hide();
+            }
             myUpdateProfileForm.Show();
         }
         ChangePasswordForm myChangePasswordForm { get; set; }
@@ -37,9 +41,14 @@ namespace MyApplication
                 myChangePasswordForm = new ChangePasswordForm()
                 {
                     MdiParent = this,
+                    
                 };
             }
 
+            if (myUpdateProfileForm.IsDisposed == false)
+            {
+                myUpdateProfileForm.Hide();
+            }
             myChangePasswordForm.Show();
         }
 
@@ -69,6 +78,19 @@ namespace MyApplication
                 userDisplayName = Infrastructure.Utility.AuthenticatedUser.FullName;
             }
             welcomeStripStatusLabel.Text = $" welcome { userDisplayName } ";
+        }
+
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Infrastructure.Utility.AuthenticatedUser = null;
+            Hide();
+            Infrastructure.Utility.LoginForm.Show();
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.MessageBox.Show("از سیستم خارج شدید");
+            System.Windows.Forms.Application.Exit();
         }
     }
 }

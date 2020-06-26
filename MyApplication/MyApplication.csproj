@@ -107,6 +107,9 @@
     <Compile Include="UpdateProfileForm.Designer.cs">
       <DependentUpon>UpdateProfileForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ChangePasswordForm.resx">
+      <DependentUpon>ChangePasswordForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Infrastructure\BaseForm.resx">
       <DependentUpon>BaseForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -130,6 +133,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="StartupForm.resx">
       <DependentUpon>StartupForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateProfileForm.resx">
+      <DependentUpon>UpdateProfileForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Documents\Readme.docx" />
     <None Include="packages.config" />
