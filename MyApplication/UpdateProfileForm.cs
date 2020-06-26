@@ -15,6 +15,7 @@ namespace MyApplication
             Models.DatabaseContext databaseContext = null;
             try
             {
+                databaseContext = new Models.DatabaseContext();
                 Models.User user = databaseContext.Users
                     .Where(x => x.Id == Infrastructure.Utility.AuthenticatedUser.Id)
                     .FirstOrDefault();

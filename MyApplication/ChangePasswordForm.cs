@@ -11,8 +11,8 @@ namespace MyApplication
         private void changePasswordButton_Click(object sender, System.EventArgs e)
         {
             string errorMessage = string.Empty;
-            if (string.IsNullOrWhiteSpace(oldPasswordTextBox.Text)
-                || string.IsNullOrWhiteSpace(newPasswordTextBox.Text)
+            if (string.IsNullOrWhiteSpace(oldpasswordTextBox.Text)
+                || string.IsNullOrWhiteSpace(newpasswordTextBox.Text)
                 || string.IsNullOrWhiteSpace(confirmPasswordTextBox.Text))
             {
                 errorMessage = "فیلدهای الزامی را پر کنید ";
@@ -33,7 +33,7 @@ namespace MyApplication
                         "طول رمز عبور جدید حداقل8 کاراکتر می باشد.";
                 }
 
-                if (string.Compare(confirmPasswordTextBox.Text, newPasswordTextBox.Text, ignoreCase: false) != 0)
+                if (string.Compare(confirmPasswordTextBox.Text, newpasswordTextBox.Text, ignoreCase: false) != 0)
                 {
                     if (errorMessage != string.Empty)
                     {
@@ -49,7 +49,7 @@ namespace MyApplication
             {
                 System.Windows.Forms.MessageBox.Show(errorMessage);
 
-                oldPasswordTextBox.Focus();
+                oldpasswordTextBox.Focus();
 
                 return;
             }
@@ -62,7 +62,7 @@ namespace MyApplication
                         .Find(Infrastructure.Utility.AuthenticatedUser.Id);
                     if (user != null)
                     {
-                        user.Password = newPasswordTextBox.Text;
+                        user.Password = newpasswordTextBox.Text;
                         databaseContext.Entry(user).State = System.Data.Entity.EntityState.Modified;
                         databaseContext.SaveChanges();
                         System.Windows.Forms.MessageBox.Show("رمز عبور با موفقیت تغییر کرد ");

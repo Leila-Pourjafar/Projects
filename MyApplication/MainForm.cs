@@ -27,10 +27,14 @@ namespace MyApplication
                     MdiParent = this,
                 };
             }
-            if (myChangePasswordForm.IsDisposed == false)
+            if (myChangePasswordForm != null)
             {
-                myChangePasswordForm.Hide();
+                if (myChangePasswordForm.IsDisposed == false)
+                {
+                    myChangePasswordForm.Hide();
+                }
             }
+            
             myUpdateProfileForm.Show();
         }
         ChangePasswordForm myChangePasswordForm { get; set; }
@@ -44,11 +48,14 @@ namespace MyApplication
                     
                 };
             }
-
-            if (myUpdateProfileForm.IsDisposed == false)
+            if (myUpdateProfileForm != null)
             {
-                myUpdateProfileForm.Hide();
+                if (myUpdateProfileForm.IsDisposed == false)
+                {
+                    myUpdateProfileForm.Hide();
+                }
             }
+           
             myChangePasswordForm.Show();
         }
 

@@ -91,7 +91,7 @@ namespace MyApplication
 			#region Runing Startup Form and then Disposing!
 			//LoginForm startupForm = new LoginForm();
 
-			System.Windows.Forms.Application.Run(Infrastructure.Utility.MainForm);
+			System.Windows.Forms.Application.Run(Infrastructure.Utility.LoginForm);
 
 			//if (startupForm != null)
 			//{

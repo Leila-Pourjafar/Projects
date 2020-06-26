@@ -38,7 +38,7 @@
             // fullnameLabel
             // 
             this.fullnameLabel.AutoSize = true;
-            this.fullnameLabel.Location = new System.Drawing.Point(49, 25);
+            this.fullnameLabel.Location = new System.Drawing.Point(49, 22);
             this.fullnameLabel.Name = "fullnameLabel";
             this.fullnameLabel.Size = new System.Drawing.Size(88, 20);
             this.fullnameLabel.TabIndex = 0;
@@ -47,6 +47,7 @@
             // fullnameTextBox
             // 
             this.fullnameTextBox.Location = new System.Drawing.Point(185, 22);
+            this.fullnameTextBox.MaxLength = 50;
             this.fullnameTextBox.Name = "fullnameTextBox";
             this.fullnameTextBox.Size = new System.Drawing.Size(263, 28);
             this.fullnameTextBox.TabIndex = 1;
@@ -54,7 +55,7 @@
             // descriptionLabel
             // 
             this.descriptionLabel.AutoSize = true;
-            this.descriptionLabel.Location = new System.Drawing.Point(49, 73);
+            this.descriptionLabel.Location = new System.Drawing.Point(49, 69);
             this.descriptionLabel.Name = "descriptionLabel";
             this.descriptionLabel.Size = new System.Drawing.Size(106, 20);
             this.descriptionLabel.TabIndex = 2;
@@ -63,6 +64,7 @@
             // descriptionTextBox
             // 
             this.descriptionTextBox.Location = new System.Drawing.Point(185, 66);
+            this.descriptionTextBox.MaxLength = 1000;
             this.descriptionTextBox.Multiline = true;
             this.descriptionTextBox.Name = "descriptionTextBox";
             this.descriptionTextBox.Size = new System.Drawing.Size(263, 159);
@@ -80,14 +82,18 @@
             // 
             // UpdateProfileForm
             // 
+            this.AcceptButton = this.updateButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(585, 294);
+            this.ControlBox = false;
             this.Controls.Add(this.updateButton);
             this.Controls.Add(this.descriptionTextBox);
             this.Controls.Add(this.descriptionLabel);
             this.Controls.Add(this.fullnameTextBox);
             this.Controls.Add(this.fullnameLabel);
+            this.MaximumSize = new System.Drawing.Size(710, 350);
+            this.MinimumSize = new System.Drawing.Size(500, 350);
             this.Name = "UpdateProfileForm";
             this.Text = "UpdateProfileForm";
             this.Load += new System.EventHandler(this.UpdateProfileForm_Load);
